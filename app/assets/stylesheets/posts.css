@@ -1,0 +1,95 @@
+/*application.html.erb*/
+.header{
+	
+	background-color: gray;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	/*うまくいかなかった。後で調べる*/
+	/*position: fixed;*/
+}
+.header-left{
+	line-height: 60px;
+	margin-left: 100px;
+	font-size: 30px;
+}
+.title{
+	background-color: yellowgreen;
+}
+.header-right{
+	display: flex;
+}
+.account-info{
+	display: flex;
+	height: 60px;
+	line-height: 60px;
+	background-color: #fff;
+	margin: 0 20px;
+}
+.header-lists{
+	display: flex;
+}
+.header-list{
+	height: 60px;
+	line-height: 60px;
+	margin: 0 20px;
+	background-color: yellowgreen;
+}
+
+/*index.html.erb*/
+.top-view{
+	/*background-image: url("diy-image.jpeg")*/
+	background-color: lightgray;
+	height: 700px;
+}
+.catch-phrase{
+	font-size: 50px;
+	text-align: center;
+	line-height: 700px
+	/*letter-spacing: 0.4em; */
+	
+}
+.main{
+	padding: 30px;
+}
+.content{
+	width: 80vw;
+	margin: 0 auto;
+	background-color: coral;
+	display: flex;
+	margin-bottom: 20px;
+}
+.content-left{
+	width: 40%;
+}
+.content-title{
+	background:rgba(217,210,210,0.5);
+	height: 60px;
+	font-size: 25px;
+	line-height: 60px;
+	padding-left: 20px;
+}
+.content-finished{
+	background-color: lightgreen;
+	/*background-image: url(SN3K0009.jpg);*/
+	-webkit-background-size: cover;
+	background-size: cover;
+	height: 400px;
+}
+.content-right{
+	width: 60%;
+}
+.content-created{
+	padding: 10px;
+	font-size: 18px;
+}
+.content-name{
+	padding: 10px;
+	font-size: 18px;
+	
+}
+.content-intro{
+	padding: 10px;
+	font-size: 18px;
+	
+}

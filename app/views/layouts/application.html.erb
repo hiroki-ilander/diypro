@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Diypro</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <div class="title"><%= link_to 'DIYの達人', '/' %></div>
+      </div>
+      <div class="header-right">
+          <ul class="account-info">
+            <li>カレントユーザーicon</li>
+            <li>カレントユーザーname</li>
+          </ul>
+        <ul class="header-lists">
+          <li class="header-list"><%= link_to '新規登録', new_user_registration_path %></li>
+          <li class="header-list"><%= link_to 'ログイン', new_user_session_path %></li>
+          <li class="header-list"><%= link_to 'マイページ', posts_path %></li>
+          <li class="header-list"><%= link_to 'ログアウト', destroy_user_session_path %></li>
+        </ul>
+      </div>
+    </header>
+    
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<div class="top-view">
+	<div class="catch-phrase">イメージを形に。</div>
+</div>
+
+<div class="main">
+	<% @posts.each do |post| %>
+		<div class="content">
+			<div class="content-left">
+				<div class="content-finished">
+					<div class="content-title"><%= post.title %></div>
+					<%= post.finished_img %>
+				</div>
+			</div>
+			<div class="content-right">
+				<div class="content-created">投稿日：<%= post.created_at %></div>
+				<div class="content-name">投稿者：</div>
+				<div class="content-intro">紹介文：<%= post.introduction %></div>
+			</div>
+		</div>
+	<% end %>
+</div>
