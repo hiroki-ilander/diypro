@@ -1,1 +1,35 @@
-<h1>show page</h1>
+<div class="show-main">
+  <div class="show-wrapper">
+    <div class="show-wrapper-left">
+    	<div class="container">
+    	  <div class="show-title"><%= @post.title %></div>
+          <div class="show-finished">
+            <% if user_signed_in? %>
+    				<%= link_to '編集する', edit_post_path(@post.id), class: 'to-btn to-edit' %>
+    				<% end %>
+        	  <%= @post.finished_img %>
+          </div>
+          <div class="name-created">
+            <!--<div class="show-img" style="background-image: url(<= rails_blob_path(@user.image) %>)"></div>-->
+            <div class=show-name ><%= @post.user.name %>さんの作品</div>
+          	<div class="show-created"><%= @post.created_at.strftime("%Y年%m月%d日") %>投稿</div>
+        	</div>
+        </div>
+  	  </div>
+  	<div class="show-wrapper-right">
+  	  <div class="container">
+      	<div class="show-intro"><%= @post.introduction %></div>
+        <div class="show-heading-title">コツとポイント!</div>
+      	<div class="show-content"><%= @post.important %></div>
+        <div class="show-heading-title">製作期間はどのくらい？</div>
+        <div class="show-content"><%= @post.production_period %></div>
+        <div class="show-heading-title">使った材料は？</div>
+        <div class="show-content"><%= @post.material %></div>
+        <div class="show-heading-title">どんな道具を使ったの？</div>
+        <div class="show-content"><%= @post.tool %></div>
+        <div class="show-heading-title">予算額は？</div>
+        <div class="show-content"><%= @post.budget %></div>
+      </div>
+  	</div>
+	</div>
+</div>

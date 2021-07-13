@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Diypro</title>
+    <title>DIYの達人</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,6 +13,8 @@
     <header class="header">
       <div class="header-left">
         <div class="title"><%= link_to 'DIYの達人', '/' %></div>
+         <p class="flash notice"><%= notice %></p>
+         <p class="flash alert"><%= alert %></p>
       </div>
       <div class="header-right">
           <ul class="account-info">
@@ -20,14 +22,17 @@
             <li>カレントユーザーname</li>
           </ul>
         <ul class="header-lists">
-          <li class="header-list"><%= link_to '新規登録', new_user_registration_path %></li>
+          <% if user_signed_in? %>
+          <li class="header-list"><%= link_to 'マイページ', user_path(current_user.id) %></li>
+          <li class="header-list"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+          <li class="header-list post"><%= link_to '投稿する', new_post_path %></li>
+          <% else %>
           <li class="header-list"><%= link_to 'ログイン', new_user_session_path %></li>
-          <li class="header-list"><%= link_to 'マイページ', posts_path %></li>
-          <li class="header-list"><%= link_to 'ログアウト', destroy_user_session_path %></li>
+          <li class="header-list" ><%= link_to '新規登録', new_user_registration_path %></li>
+          <% end %>
         </ul>
       </div>
     </header>
-    
     <%= yield %>
   </body>
 </html>

@@ -1,7 +1,6 @@
 /*application.html.erb*/
 .header{
-	
-	background-color: gray;
+	background-color: #de8f07;
 	height: 60px;
 	display: flex;
 	justify-content: space-between;
@@ -11,10 +10,23 @@
 .header-left{
 	line-height: 60px;
 	margin-left: 100px;
-	font-size: 30px;
+	display: flex;
+	align-items: baseline;
 }
 .title{
-	background-color: yellowgreen;
+	font-size: 30px;
+	padding: 0 20px;
+	transition-duration: 0.2s;
+}
+.title:hover{
+	background-color: #f79f08;
+	height: 50px;
+	margin-top: 5px;
+	border-radius: 10px;
+}
+.flash{
+	margin-left: 30px;
+	color: red;
 }
 .header-right{
 	display: flex;
@@ -23,8 +35,12 @@
 	display: flex;
 	height: 60px;
 	line-height: 60px;
-	background-color: #fff;
 	margin: 0 20px;
+	color: #FFF6E6;
+}
+.account-info:hover{
+	background-color: #f79f08;
+	
 }
 .header-lists{
 	display: flex;
@@ -33,31 +49,52 @@
 	height: 60px;
 	line-height: 60px;
 	margin: 0 20px;
-	background-color: yellowgreen;
+	padding: 0 10px;
+	color: #FFF6E6;
+	transition-duration: 0.2s;
+}
+.header-list:hover{
+	background-color: #f79f08;
+	height: 50px;
+	margin-top: 5px;
+	border-radius: 10px;
+}
+.header-list.post{
+	background-color: #945f05;
+	border-radius: 10px;
+}
+.header-list.post:hover{
+	background-color: #ad6f06;
+	height: 50px;
+	margin-top: 5px;
 }
 
 /*index.html.erb*/
 .top-view{
-	/*background-image: url("diy-image.jpeg")*/
-	background-color: lightgray;
+	background-image: url("213809_m.jpg");
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
 	height: 700px;
 }
 .catch-phrase{
-	font-size: 50px;
+	font-size: 70px;
 	text-align: center;
 	line-height: 700px
 	/*letter-spacing: 0.4em; */
-	
 }
 .main{
 	padding: 30px;
+	background-color: #FFF6E6;
 }
 .content{
 	width: 80vw;
 	margin: 0 auto;
-	background-color: coral;
+	background-color: #de8f07;
 	display: flex;
 	margin-bottom: 20px;
+	border-radius: 20px;
+	position: relative;
 }
 .content-left{
 	width: 40%;
@@ -68,13 +105,16 @@
 	font-size: 25px;
 	line-height: 60px;
 	padding-left: 20px;
+	border-top-left-radius:20px;
 }
 .content-finished{
-	background-color: lightgreen;
-	/*background-image: url(SN3K0009.jpg);*/
+	background-image: url("P8220448rr.jpeg");
 	-webkit-background-size: cover;
 	background-size: cover;
-	height: 400px;
+	background-position: center;
+	height: 350px;
+	border-top-left-radius:20px;
+	border-bottom-left-radius:20px;
 }
 .content-right{
 	width: 60%;
@@ -89,7 +129,126 @@
 	
 }
 .content-intro{
-	padding: 10px;
+	padding: 10px 40px 10px 10px;
 	font-size: 18px;
 	
+}
+.to-btn{
+	position: absolute;
+	background-color: #945f05;
+	height: 70px;
+	width: 70px;
+	border-radius: 50px;
+	text-align: center;
+	line-height: 70px;
+	color: #FFF6E6;
+	
+}
+.to-edit{
+	top: 45px;
+	right: -35px;
+}
+.to-show{
+	top: 245px;
+	right: -35px;
+}
+.to-btn:hover{
+	background-color: #ad6f06;
+}
+
+/*show.html.erb*/
+.show-main{
+	background-color: #FFF6E6;
+}
+.container{
+	margin: 0 auto;
+	width: 600px;
+	padding-top: 30px;
+	
+}
+.show-wrapper-left{
+}
+.show-title{
+	text-align: center;
+	font-size: 30px;
+}
+.show-finished{
+	margin-top: 30px;
+	background-image: url("P8220448rr.jpeg");
+	height: 400px;
+	-webkit-background-size: center;
+	background-size: center;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+	position: relative;
+}
+.name-created{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.show-name{
+	font-size: 20px;
+	margin-top: 20px;
+}
+.show-created{
+	margin-left: 100px;
+}
+.show-wrapper-right{
+}
+.show-intro{
+	padding-top: 30px;
+	width: 600px;
+}
+.show-heading-title{
+	background-color: #945f05;
+	margin-top: 30px;
+	font-family: serif;
+	color: #FFF6E6;
+	padding: 10px;
+	border-radius: 10px;
+}
+.show-content{
+	padding-top: 10px;
+}
+/*sign-up sign-in page*/
+.background{
+	background-color: #FFF6E6;
+	height: 100vh;
+}
+.sign-container{
+	background-color: #fff;
+	width: 600px;
+	margin: 0 auto;
+	padding: 30px;
+}
+.sign-title{
+	font-size: 30px;
+	padding: 30px;
+	text-align: center;
+}
+.form{
+	border-bottom: 2px solid brown
+}
+.form-control{
+	margin: 0 auto;
+	width: 400px;
+	display: block;
+	font-size: 20px;
+	height: 60px;
+}
+#profile{
+	display: block;
+	margin: 10px;
+}
+#btn{
+	margin-top: 30px;
+	background-color: #de8f07;
+	color: #FFF6E6;
+	border-radius: 10px;
+}
+.links{
+	color: #de8f07;
+	display: block;
+	margin: 5px;
 }

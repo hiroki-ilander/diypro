@@ -1,1 +1,28 @@
 <h1>new page</h1>
+<%= form_with(model: @posts, local: true) do |f| %>
+	<%= f.text_field :title, placeholder: "作品名をかいてね" %>
+	<%= f.label :title, "完成写真" %>
+	<%= f.text_field :finished_img, placeholder: "完成写真" %>
+	<%= f.text_area :introduction, placeholder: "記事の紹介", rows: "2" %>
+	<%= f.text_field :production_period, placeholder: "製作期間" %>
+	<%= f.text_area :material, placeholder: "使った材料", rows: "2" %>
+	<%= f.text_area :tool, placeholder: "主な使用道具", rows: "2" %>
+	<%= f.text_area :budget, placeholder: "予算額はいくら？", rows: "2" %>
+	<%= f.text_area :flow_caption1, placeholder: "工程タイトル", rows: "2" %>
+	<%= f.text_area :flow_img1, placeholder: "工程写真", rows: "2" %>
+	<%= f.text_area :flow_description1, placeholder: "工程説明", rows: "2" %>
+	<%= f.text_area :flow_caption2, placeholder: "工程タイトル", rows: "2" %>
+	<%= f.text_area :flow_img2, placeholder: "工程写真", rows: "2" %>
+	<%= f.text_area :flow_description2, placeholder: "工程説明", rows: "2" %>
+	<%= f.text_area :flow_caption3, placeholder: "工程タイトル", rows: "2" %>
+	<%= f.text_area :flow_img3, placeholder: "工程写真", rows: "2" %>
+	<%= f.text_area :flow_description3, placeholder: "工程説明", rows: "2" %>
+	<%= f.text_area :flow_caption4, placeholder: "工程タイトル", rows: "2" %>
+	<%= f.text_area :flow_img4, placeholder: "工程写真", rows: "2" %>
+	<%= f.text_area :flow_description4, placeholder: "工程説明", rows: "2" %>
+	<%= f.text_area :flow_caption5, placeholder: "工程タイトル", rows: "2" %>
+	<%= f.text_area :flow_img5, placeholder: "工程写真", rows: "2" %>
+	<%= f.text_area :flow_description5, placeholder: "工程説明", rows: "2" %>
+	<%= f.text_area :important, placeholder: "コツやポイントを教えてあげよう！", rows: "2" %>
+	<%= f.submit "投稿" %>
+<% end %>
