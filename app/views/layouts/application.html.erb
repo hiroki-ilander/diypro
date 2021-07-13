@@ -18,8 +18,8 @@
       </div>
       <div class="header-right">
           <ul class="account-info">
-            <li>カレントユーザーicon</li>
-            <li>カレントユーザーname</li>
+            <li><div class="profile-image" style="background-image: url(<%= rails_blob_path(current_user.image) %>) "></li>
+            <li><%= current_user.name %></li>
           </ul>
         <ul class="header-lists">
           <% if user_signed_in? %>
