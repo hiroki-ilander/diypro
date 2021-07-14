@@ -17,10 +17,12 @@
          <p class="flash alert"><%= alert %></p>
       </div>
       <div class="header-right">
+        <a href="/users/edit/<%= current_user.id %>">
           <ul class="account-info">
             <li><div class="profile-image" style="background-image: url(<%= rails_blob_path(current_user.image) %>) "></li>
             <li><%= current_user.name %></li>
           </ul>
+        </a>
         <ul class="header-lists">
           <% if user_signed_in? %>
           <li class="header-list"><%= link_to 'マイページ', user_path(current_user.id) %></li>

@@ -37,6 +37,14 @@
 	line-height: 60px;
 	margin: 0 20px;
 	color: #FFF6E6;
+	padding: 0 15px;
+	transition-duration: 0.2s;
+}
+.account-info:hover{
+	background-color: #f79f08;
+	height: 50px;
+	margin-top: 5px;
+	border-radius: 10px;
 }
 .profile-image{
 	width: 30px;
@@ -45,14 +53,11 @@
 	background-size: cover;
 	background-position: center;
 }
-.account-info:hover{
-	background-color: #f79f08;
-	
-}
 .header-lists{
 	display: flex;
 }
 .header-list{
+	display: block;
 	height: 60px;
 	line-height: 60px;
 	margin: 0 20px;
@@ -192,7 +197,7 @@
 .name-created{
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: baseline;
 }
 .show-name{
 	font-size: 20px;
@@ -208,7 +213,7 @@
 	width: 600px;
 }
 .show-heading-title{
-	background-color: #945f05;
+	background-color: #de8f07;
 	margin-top: 30px;
 	font-family: serif;
 	color: #FFF6E6;
@@ -244,10 +249,7 @@
 	font-size: 20px;
 	height: 60px;
 }
-#profile{
-	display: block;
-	margin: 10px;
-}
+
 #btn{
 	margin-top: 30px;
 	background-color: #de8f07;
@@ -258,4 +260,33 @@
 	color: #de8f07;
 	display: block;
 	margin: 5px;
+}
+/*投稿ページ　new.html.erb*/
+.page-title{
+	padding-top: 30px;
+}
+.title-text{
+text-align: center;
+font-size: 30px;
+}
+.background-new{
+	background-color: #FFF6E6;
+}
+#post-btn{
+	position: absolute;
+	position: fixed;
+	background-color: #945f05;
+	height: 70px;
+	width: 70px;
+	border-radius: 50px;
+	text-align: center;
+	line-height: 70px;
+	color: #FFF6E6;
+	top: 100px;
+	right: 20%;
+	border:none;
+	font-size: 20px;
+}
+#post-btn:hover{
+	background-color: #ad6f06;
 }
