@@ -23,7 +23,8 @@ class PostsController < ApplicationController
 		post.update(posts_params)
 		redirect_to "/"
 	end
-	
+	def destroy
+	end
 	private 
 	def posts_params
 		params.require(:post).permit(:title, :image, :introduction, :production_period,

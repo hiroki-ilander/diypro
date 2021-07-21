@@ -156,6 +156,9 @@
 	color: #FFF6E6;
 	
 }
+.to-btn:hover{
+	background-color: #ad6f06;
+}
 .to-edit{
 	top: 45px;
 	right: -35px;
@@ -164,8 +167,13 @@
 	top: 245px;
 	right: -35px;
 }
-.to-btn:hover{
-	background-color: #ad6f06;
+.to-delete{
+	top: 275px;
+	right: -35px;
+	background-color: #053a94;
+}
+.to-delete:hover{
+	background-color: #074dc5;
 }
 
 /*show.html.erb*/
@@ -187,8 +195,9 @@
 .show-finished{
 	margin-top: 30px;
 	height: 400px;
-	-webkit-background-size: center;
-	background-size: center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
 	background-repeat: no-repeat;
 	border-radius: 10px;
 	position: relative;

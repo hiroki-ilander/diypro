@@ -6,6 +6,7 @@
           <div class="show-finished", style="background-image: url(<%= rails_blob_path(@post.image) %>) ">
             <% if user_signed_in? %>
     				<%= link_to '編集する', edit_post_path(@post.id), class: 'to-btn to-edit' %>
+    				<%= link_to '削除する', post_path(@post.id), method: :delete, class: 'to-btn to-delete' %>
     				<% end %>
         	  <%= @post.image %>
           </div>
