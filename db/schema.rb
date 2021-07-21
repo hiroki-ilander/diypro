@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_12_234918) do
+ActiveRecord::Schema.define(version: 2021_07_21_000852) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name", null: false
@@ -35,27 +35,11 @@ ActiveRecord::Schema.define(version: 2021_07_12_234918) do
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "title"
-    t.string "finished_img"
     t.text "introduction"
     t.string "production_period"
     t.text "material"
     t.text "tool"
     t.text "budget"
-    t.string "flow_caption1"
-    t.string "flow_img1"
-    t.text "flow_description1"
-    t.string "flow_caption2"
-    t.string "flow_img2"
-    t.text "flow_description2"
-    t.string "flow_caption3"
-    t.string "flow_img3"
-    t.text "flow_description3"
-    t.string "flow_caption4"
-    t.string "flow_img4"
-    t.text "flow_description4"
-    t.string "flow_caption5"
-    t.string "flow_img5"
-    t.text "flow_description5"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

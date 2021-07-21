@@ -6,9 +6,8 @@
 	<% @posts.each do |post| %>
 		<div class="content">
 			<div class="content-left">
-				<div class="content-finished">
+				<div class="content-finished"style="background-image: url(<%= rails_blob_path(post.image) %>) ">
 					<div class="content-title"><%= post.title %></div>
-					<%= post.finished_img %>
 				</div>
 			</div>
 			<div class="content-right">

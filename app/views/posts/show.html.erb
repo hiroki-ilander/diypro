@@ -3,14 +3,14 @@
     <div class="show-wrapper-left">
     	<div class="container">
     	  <div class="show-title"><%= @post.title %></div>
-          <div class="show-finished">
+          <div class="show-finished", style="background-image: url(<%= rails_blob_path(@post.image) %>) ">
             <% if user_signed_in? %>
     				<%= link_to '編集する', edit_post_path(@post.id), class: 'to-btn to-edit' %>
     				<% end %>
-        	  <%= @post.finished_img %>
+        	  <%= @post.image %>
           </div>
           <div class="name-created">
-            <!--<div class="show-img" style="background-image: url(<= rails_blob_path(@user.image) %>)"></div>-->
+            <div class="show-img" style="background-image: url(<%= rails_blob_path(@post.user.image) %>)"></div>
             <div class=show-name ><%= @post.user.name %>さんの作品</div>
           	<div class="show-created"><%= @post.created_at.strftime("%Y年%m月%d日") %>投稿</div>
         	</div>

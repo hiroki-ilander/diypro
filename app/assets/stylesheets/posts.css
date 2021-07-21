@@ -120,7 +120,7 @@
 	border-top-left-radius:20px;
 }
 .content-finished{
-	background-image: url("P8220448rr.jpeg");
+	/*background-image: url("P8220448rr.jpeg");*/
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-position: center;
@@ -186,7 +186,6 @@
 }
 .show-finished{
 	margin-top: 30px;
-	background-image: url("P8220448rr.jpeg");
 	height: 400px;
 	-webkit-background-size: center;
 	background-size: center;
@@ -198,6 +197,13 @@
 	display: flex;
 	justify-content: center;
 	align-items: baseline;
+}
+.show-img{
+	width: 30px;
+	height: 30px;
+	margin: 0 15px 0 0;
+	background-size: cover;
+	background-position: center;
 }
 .show-name{
 	font-size: 20px;

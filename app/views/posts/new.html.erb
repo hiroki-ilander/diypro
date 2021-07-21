@@ -5,8 +5,8 @@
 	    <div class="show-heading-title">作品名</div>
 		<%= f.text_field :title, class: 'form-control', style: "border: none", placeholder: "作品名をかいてね" %>
 	    <div class="show-heading-title">完成写真</div>
-		<%= f.text_field :finished_img, class: 'form-control', style: "border: none", placeholder: "完成写真" %>
-	    <div class="show-heading-title">記事の紹介</div>
+		<%= f.file_field :image, class: 'form-control', style: "border: none", placeholder: "完成写真" %>
+	    <div class="show-heading-title">作品の紹介</div>
 		<%= f.text_area :introduction, class: 'form-control', style: "border: none", placeholder: "記事の紹介", rows: "2" %>
 	     <div class="show-heading-title">コツとポイント！</div>
 		<%= f.text_area :important, class: 'form-control', style: "border: none", placeholder: "コツやポイントを教えてあげよう！", rows: "2" %>
@@ -18,26 +18,7 @@
 		<%= f.text_area :tool, class: 'form-control', style: "border: none", placeholder: "主な使用道具", rows: "2" %>
 	     <div class="show-heading-title">予算額は？</div>
 		<%= f.text_area :budget, class: 'form-control', style: "border: none", placeholder: "予算額はいくら？", rows: "2" %>
-	     <div class="show-heading-title">工程１</div>
-		<%= f.text_area :flow_caption1, style: "border: none", placeholder: "工程タイトル", rows: "2" %>
-		<%= f.text_area :flow_img1, style: "border: none", placeholder: "工程写真", rows: "2" %>
-		<%= f.text_area :flow_description1, style: "border: none", placeholder: "工程説明", rows: "2" %>
-	     <div class="show-heading-title">工程２</div>
-		<%= f.text_area :flow_caption2, style: "border: none", placeholder: "工程タイトル", rows: "2" %>
-		<%= f.text_area :flow_img2, style: "border: none", placeholder: "工程写真", rows: "2" %>
-		<%= f.text_area :flow_description2, style: "border: none", placeholder: "工程説明", rows: "2" %>
-	     <div class="show-heading-title">工程３</div>
-		<%= f.text_area :flow_caption3, style: "border: none", placeholder: "工程タイトル", rows: "2" %>
-		<%= f.text_area :flow_img3, style: "border: none", placeholder: "工程写真", rows: "2" %>
-		<%= f.text_area :flow_description3, style: "border: none", placeholder: "工程説明", rows: "2" %>
-	     <div class="show-heading-title">工程４</div>
-		<%= f.text_area :flow_caption4, style: "border: none", placeholder: "工程タイトル", rows: "2" %>
-		<%= f.text_area :flow_img4, style: "border: none", placeholder: "工程写真", rows: "2" %>
-		<%= f.text_area :flow_description4, style: "border: none", placeholder: "工程説明", rows: "2" %>
-		<%= f.text_area :flow_caption5, style: "border: none", placeholder: "工程タイトル", rows: "2" %>
-	     <div class="show-heading-title">工程５</div>
-		<%= f.text_area :flow_img5, style: "border: none", placeholder: "工程写真", rows: "2" %>
-		<%= f.text_area :flow_description5, style: "border: none", placeholder: "工程説明", rows: "2" %>
+
 		<%= f.submit "投稿", id: 'post-btn' %>
 	</div>
 	<% end %>
