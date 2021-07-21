@@ -1,26 +1,7 @@
 <div class="background-new">
 	<div class="page-title"><p class="title-text">投稿ページ</p></div>
-	<%= form_with(model: @posts, local: true) do |f| %>
-	<div class="container">
-	    <div class="show-heading-title">作品名</div>
-		<%= f.text_field :title, class: 'form-control', style: "border: none", placeholder: "作品名をかいてね" %>
-	    <div class="show-heading-title">完成写真</div>
-		<%= f.file_field :image, class: 'form-control', style: "border: none", placeholder: "完成写真" %>
-	    <div class="show-heading-title">作品の紹介</div>
-		<%= f.text_area :introduction, class: 'form-control', style: "border: none", placeholder: "記事の紹介", rows: "2" %>
-	     <div class="show-heading-title">コツとポイント！</div>
-		<%= f.text_area :important, class: 'form-control', style: "border: none", placeholder: "コツやポイントを教えてあげよう！", rows: "2" %>
-	     <div class="show-heading-title">製作期間はどのくらい？</div>
-		<%= f.text_field :production_period, class: 'form-control', style: "border: none", placeholder: "製作期間" %>
-	     <div class="show-heading-title">使った材料は？</div>
-		<%= f.text_area :material, class: 'form-control', style: "border: none", placeholder: "使った材料", rows: "2" %>
-	     <div class="show-heading-title">どんな道具を使ったの？</div>
-		<%= f.text_area :tool, class: 'form-control', style: "border: none", placeholder: "主な使用道具", rows: "2" %>
-	     <div class="show-heading-title">予算額は？</div>
-		<%= f.text_area :budget, class: 'form-control', style: "border: none", placeholder: "予算額はいくら？", rows: "2" %>
-
-		<%= f.submit "投稿", id: 'post-btn' %>
-	</div>
-	<% end %>
+<%= form_with(model: @post, local: true) do |f| %>
+    <%= render partial: "post", locals: { f: f } %>
+<% end %>
 </div>
 

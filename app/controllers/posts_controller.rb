@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 		@posts = Post.includes(:user).all
 	end
 	def new
-		@posts = Post.new
+		@post = Post.new
 	end
 	def create
 		Post.create(posts_params)

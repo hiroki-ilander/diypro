@@ -1,13 +1,6 @@
-<h1>編集しよう</h1>
+<div class="background-new">
+	<div class="page-title"><p class="title-text">編集ページ</p></div>
 <%= form_with(model: @post, local: true) do |f| %>
-	<%= f.text_field :title, placeholder: "作品名をかいてね" %>
-	<%= f.label :image, "完成写真" %>
-	<%= f.file_field :image, placeholder: "完成写真" %>
-	<%= f.text_area :introduction, placeholder: "記事の紹介", rows: "2" %>
-	<%= f.text_field :production_period, placeholder: "製作期間" %>
-	<%= f.text_area :material, placeholder: "使った材料", rows: "2" %>
-	<%= f.text_area :tool, placeholder: "主な使用道具", rows: "2" %>
-	<%= f.text_area :budget, placeholder: "予算額はいくら？", rows: "2" %>
-	<%= f.text_area :important, placeholder: "コツやポイントを教えてあげよう！", rows: "2" %>
-	<%= f.submit "投稿" %>
+    <%= render partial: "post", locals: { f: f } %>
 <% end %>
+</div>
