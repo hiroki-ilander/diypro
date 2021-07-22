@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <header class="header">
+    <header class="header" >
       <div class="header-left">
         <div class="title"><%= link_to 'DIYの達人', '/' %></div>
          <p class="flash notice"><%= notice %></p>
@@ -18,14 +18,14 @@
       </div>
       <div class="header-right">
         <% if user_signed_in? %>
-        <a href="/users/edit/<%= current_user.id %>">
+        <a href="/users/edit/#{<%= current_user.id %>}">
           <ul class="account-info">
             <li><div class="profile-image" style="background-image: url(<%= rails_blob_path(current_user.image) %>) "></li>
             <li><%= current_user.name %></li>
           </ul>
         </a>
         <ul class="header-lists">
-          <li class="header-list"><%= link_to 'マイページ', user_path(current_user.id) %></li>
+          <li class="header-list"><%= link_to '私の投稿♡', user_path(current_user.id) %></li>
           <li class="header-list"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
           <li class="header-list post"><%= link_to '投稿する', new_post_path %></li>
          <% else %>
