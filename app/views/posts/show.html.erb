@@ -19,17 +19,29 @@
   	  </div>
   	<div class="show-wrapper-right">
   	  <div class="container">
+  	    <% if @post.introduction.present? %>
       	<div class="show-intro"><%= @post.introduction %></div>
-        <div class="show-heading-title">コツとポイント!</div>
+      	<% end %>
+  	    <% if @post.introduction.present? %>
+        <div class="show-heading-title">工夫したところ、コツやポイント!</div>
       	<div class="show-content"><%= @post.important %></div>
+      	<% end %>
+  	    <% if @post.introduction.present? %>
         <div class="show-heading-title">製作期間はどのくらい？</div>
         <div class="show-content"><%= @post.production_period %></div>
+      	<% end %>
+  	    <% if @post.introduction.present? %>
         <div class="show-heading-title">使った材料は？</div>
         <div class="show-content"><%= @post.material %></div>
+      	<% end %>
+  	    <% if @post.introduction.present? %>
         <div class="show-heading-title">どんな道具を使ったの？</div>
         <div class="show-content"><%= @post.tool %></div>
+      	<% end %>
+  	    <% if @post.introduction.present? %>
         <div class="show-heading-title">予算額は？</div>
         <div class="show-content"><%= @post.budget %></div>
+      	<% end %>
       </div>
   	</div>
 	</div>
