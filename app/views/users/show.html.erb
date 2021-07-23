@@ -1,6 +1,7 @@
 
 <div class="main">
 	<div class="page-title"><p class="title-text"><%= @name %>さんの投稿一覧</p></div>
+	<% if @posts.ids.present? %>
 	<% @posts.each do |post| %>
 		<div class="content">
 			<div class="content-left">
@@ -18,5 +19,8 @@
 				<%= link_to '詳細へ', post_path(post.id), class: 'to-btn to-show' %>
 			</div>
 		</div>
+	<% end %>
+	<% else %>
+	<div class="page-title"><p class="title-text">まだ<%= @name %>さんの投稿がありません！作品を投稿して共有しよう。</p></div>
 	<% end %>
 </div>

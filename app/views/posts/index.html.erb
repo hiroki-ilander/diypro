@@ -1,5 +1,6 @@
 <div class="top-view">
 	<div class="catch-phrase">イメージを形に。</div>
+	<!--<div class="registration-recommend">あなたの作品を共有しませんか？</div>-->
 </div>
 
 <div class="main">
@@ -14,7 +15,7 @@
 				<div class="content-created"><%= post.created_at.strftime("%Y年%m月%d日") %>投稿</div>
 				<div class="content-name">投稿者：<%= post.user.name %></div>
 				<div class="content-intro"><%= post.introduction %></div>
-				<% if user_signed_in? %>
+				<% if user_signed_in? && current_user.id == post.user_id %>
 				<%= link_to '編集する', edit_post_path(post.id), class: 'to-btn to-edit' %>
 				<% end %>
 				<%= link_to '詳細へ', post_path(post.id), class: 'to-btn to-show' %>

@@ -3,6 +3,7 @@
 	background-image: url("wood.jpg");
 	height: 60px;
 	width: 100%;
+	padding: 5px 0;
 	display: flex;
 	justify-content: space-between;
 	position: fixed;
@@ -14,16 +15,15 @@
 }
 .header-left{
 	line-height: 60px;
-	margin-left: 100px;
+	margin-left: 80px;
 	display: flex;
 	align-items: baseline;
 }
 .title{
-	color: #945f05;
 	font-size: 30px;
 	padding: 0 20px;
 	transition-duration: 0.2s;
-
+  /*font-family: 'mouhitsu';*/
 }
 .title:hover{
 	background-color: #f79f08;
@@ -31,19 +31,23 @@
 	margin-top: 5px;
 	border-radius: 10px;
 }
+.title-text{
+	color: #945f05;
+}
 .flash{
 	margin-left: 30px;
 	color: red;
 }
 .header-right{
 	display: flex;
+	padding-right: 20px;
 }
 .account-info{
+	color: #945f05;
 	display: flex;
 	height: 60px;
 	line-height: 60px;
 	margin: 0 20px;
-	color: #945f05;
 	padding: 0 15px;
 	transition-duration: 0.2s;
 }
@@ -65,13 +69,8 @@
 	display: flex;
 }
 .header-list{
-	/*color: #945f05;*/
-	display: block;
-	height: 60px;
-	line-height: 60px;
-	margin: 0 20px;
-	padding: 0 10px;
 	transition-duration: 0.2s;
+	 list-style: none;
 }
 .header-list:hover{
 	background-color: #f79f08;
@@ -79,9 +78,24 @@
 	margin-top: 5px;
 	border-radius: 10px;
 }
+.header-list-text{
+	display: block;
+	height: 60px;
+	line-height: 60px;
+	margin: 0 20px;
+	padding: 0 10px;
+	color: #945f05;
+}
 .header-list.post{
+	display: block;
+	height: 60px;
+	line-height: 60px;
+	margin: 0 20px;
+	padding: 0 10px;
+	transition-duration: 0.2s;
 	background-color: #945f05;
 	border-radius: 10px;
+	color: #FFF6E6;
 }
 .header-list.post:hover{
 	background-color: #ad6f06;

@@ -4,7 +4,7 @@
     	<div class="container">
     	  <div class="show-title"><%= @post.title %></div>
           <div class="show-finished", style="background-image: url(<%= rails_blob_path(@post.image) %>) ">
-            <% if user_signed_in? %>
+            <% if current_user.id == @post.user_id %>
     				<%= link_to '編集する', edit_post_path(@post.id), class: 'to-btn to-edit' %>
     				<%= link_to '削除する', post_path(@post.id), method: :delete, data: { confirm: "本当に削除しますか?" }, class: 'to-btn to-delete' %>
     				<% end %>

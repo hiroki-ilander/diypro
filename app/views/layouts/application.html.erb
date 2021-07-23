@@ -12,7 +12,7 @@
   <body>
     <header class="header" >
       <div class="header-left">
-        <div class="title"><%= link_to 'DIYの達人', '/' %></div>
+        <div class="title"><%= link_to 'DIYの達人', '/' , class: 'title-text' %></div>
          <p class="flash notice"><%= notice %></p>
          <p class="flash alert"><%= alert %></p>
       </div>
@@ -25,12 +25,12 @@
           </ul>
         </a>
         <ul class="header-lists">
-          <li class="header-list"><%= link_to '私の投稿♡', user_path(current_user.id) %></li>
-          <li class="header-list"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-          <li class="header-list post"><%= link_to '投稿する', new_post_path %></li>
+          <li class="header-list"><%= link_to '私の投稿♡', user_path(current_user.id), class: 'header-list-text' %></li>
+          <li class="header-list"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'header-list-text' %></li>
+          <li class><%= link_to '投稿する', new_post_path, class: 'header-list post' %></li>
          <% else %>
-          <li class="header-list"><%= link_to 'ログイン', new_user_session_path %></li>
-          <li class="header-list" ><%= link_to '新規登録', new_user_registration_path %></li>
+          <li class="header-list"><%= link_to 'ログイン', new_user_session_path, class: 'header-list-text' %></li>
+          <li class="header-list" ><%= link_to '新規登録', new_user_registration_path, class: 'header-list-text' %></li>
          <% end %>
         </ul>
       </div>
