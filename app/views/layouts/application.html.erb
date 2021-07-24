@@ -18,7 +18,7 @@
       </div>
       <div class="header-right">
         <% if user_signed_in? %>
-        <a href="/users/edit/#{<%= current_user.id %>}">
+        <a href="/users/<%= current_user.id %>/edit">
           <ul class="account-info">
             <li><div class="profile-image" style="background-image: url(<%= rails_blob_path(current_user.image) %>) "></li>
             <li><%= current_user.name %></li>

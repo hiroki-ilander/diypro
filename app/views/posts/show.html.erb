@@ -4,11 +4,10 @@
     	<div class="container">
     	  <div class="show-title"><%= @post.title %></div>
           <div class="show-finished", style="background-image: url(<%= rails_blob_path(@post.image) %>) ">
-            <% if user_signed_in? && current_user.id == @post.user_id %>
+          <% if user_signed_in? && current_user.id == @post.user_id %>
     				<%= link_to '編集する', edit_post_path(@post.id), class: 'to-btn to-edit' %>
     				<%= link_to '削除する', post_path(@post.id), method: :delete, data: { confirm: "本当に削除しますか?" }, class: 'to-btn to-delete' %>
-    				<% end %>
-        	  <%= @post.image %>
+    			<% end %>
           </div>
           <div class="name-created">
             <div class="show-img" style="background-image: url(<%= rails_blob_path(@post.user.image) %>)"></div>
@@ -46,17 +45,17 @@
       <div class="container">
         <% if user_signed_in? %>
           <%= form_with(model: [@post, @comment], local: true) do |f| %>
-          <%= f.text_area :text, placeholder: "コメントする", rows: "3" %>
-          <%= f.submit "物申す" %>
+          <%= f.text_area :text, placeholder: "コメントする", rows: "3", class: 'comment-input' %>
+          <%= f.submit "送信", class: 'comment-btn' %>
           <% end %>
         <% else %>
           <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
         <% end %>
         <div class="comments">
-          <h4>＜コメント一覧＞</h4>
+          <h4 class="comments-title">＜コメント一覧＞</h4>
           <% if @comments %>
             <% @comments.each do |comment| %>
-              <p>
+              <p class="comment">
                 <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
                 <%= comment.text %>
               </p>

@@ -1,1 +1,37 @@
-<h1>アカウント編集</h1>
+<div class="background">
+  <h2 class="sign-title">アカウント情報の編集</h2>
+  <div class="sign-container">
+  
+  <%= form_with(model: @user, local: true) do |f| %>
+    <div class="form">
+      <%= f.text_field :name, class: 'form-control', style: "border: none", placeholder: 'ニックネーム' %>
+    </div>
+      <div class="form">
+      <%= f.email_field :email, class: 'form-control', style: "border: none", autofocus: true, placeholder: 'メールアドレス', 
+      autocomplete: "email" %>
+      </div>
+      
+      <div class="form">
+      <%= f.password_field :password, class: 'form-control', style: "border: none", autocomplete: "new-password", 
+      placeholder: 'パスワード６文字以上' %>
+      </div>
+
+    <div class="form">
+      <%= f.password_field :password_confirmation, class: 'form-control',style: "border: none", 
+      placeholder: 'パスワード確認', autocomplete: "new-password" %>
+    </div>
+    
+    <div class="form">
+      <%= f.label :image,'★プロフィール画像★', id: 'profile' %>
+      <%= f.file_field :image, class: 'form-control', style: "border: none", placeholder: 'プロフィール画像' %>
+    </div>
+  
+    <div class="actions">
+      <%= f.submit "アカウントの更新", class: 'form-control', id: 'btn' %>
+    </div>
+    <% end %>
+    
+
+    
+  </div>
+</div>
