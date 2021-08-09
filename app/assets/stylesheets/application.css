@@ -40,8 +40,8 @@ ol, ul {
   list-style: none;
   list-style-type: none;
 }
-/*適用されない*/
-/*@font-face{*/
-/*	font-family: 'mouhitsu';*/
-/*	src: url('/assets/mouhitsu.ttf') format("truetype");*/
-/*}*/
+
+@font-face{
+	font-family: 'mouhitsu';
+	src: url('/assets/001Shirokuma-Regular.otf');
+}
