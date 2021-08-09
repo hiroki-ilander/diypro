@@ -14,6 +14,23 @@
             <div class=show-name ><%= @post.user.name %>さんの作品</div>
           	<div class="show-created"><%= @post.created_at.strftime("%Y年%m月%d日") %>投稿</div>
         	</div>
+          <div class="likes">
+            <% if user_signed_in? %>
+            <div class="content-like-count">
+              good job! <%= @post.likes.count %>
+            </div>
+              <% if current_user.already_liked?(@post) %>
+                <%= button_to 'good job!を取り消す', post_like_path(@post), {method: :delete, class: "content-like-btn"} %>
+              <% else %>
+                <%= button_to 'good job!', post_likes_path(@post), {method: :post, class: "content-like-btn"} %>
+            <% end %>
+            <% else %>
+            <div class="content-like-count">
+              good job! <%= @post.likes.count %>
+            </div>
+            <div class = "suggest"><inpact>ログインして「good job!」してあげよう！</inpact></div>
+            <% end %>
+          </div>
         </div>
   	  </div>
   	<div class="show-wrapper-right">
@@ -21,23 +38,23 @@
   	    <% if @post.introduction? %>
       	<div class="show-intro"><%= @post.introduction %></div>
       	<% end %>
-  	    <% if @post.introduction? %>
+  	    <% if @post.important? %>
         <div class="show-heading-title">工夫したところ、コツやポイント!</div>
       	<div class="show-content"><%= @post.important %></div>
       	<% end %>
-  	    <% if @post.introduction? %>
+  	    <% if @post.production_period? %>
         <div class="show-heading-title">製作期間はどのくらい？</div>
         <div class="show-content"><%= @post.production_period %></div>
       	<% end %>
-  	    <% if @post.introduction? %>
+  	    <% if @post.material? %>
         <div class="show-heading-title">使った材料は？</div>
         <div class="show-content"><%= @post.material %></div>
       	<% end %>
-  	    <% if @post.introduction? %>
+  	    <% if @post.tool? %>
         <div class="show-heading-title">どんな道具を使ったの？</div>
         <div class="show-content"><%= @post.tool %></div>
       	<% end %>
-  	    <% if @post.introduction? %>
+  	    <% if @post.budget? %>
         <div class="show-heading-title">予算額は？</div>
         <div class="show-content"><%= @post.budget %></div>
       	<% end %>

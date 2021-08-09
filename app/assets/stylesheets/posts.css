@@ -170,7 +170,26 @@ box-shadow: 18px 12px 33px -18px rgba(48, 48, 48, 0.5);
 .content-intro{
 	padding: 10px 40px 10px 10px;
 	font-size: 18px;
-	
+	height: 220px;
+}
+.likes{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+}
+.content-like-count{
+	border: 2px solid #053a94;
+	height: 40px;
+	border-radius:20px;
+	padding: 10px;
+}
+.content-like{
+	position: absolute;
+	right: 30px;
+	border: 2px solid #053a94;
+	height: 40px;
+	border-radius:20px;
+	padding: 10px;
 }
 .to-btn{
 	position: absolute;
@@ -253,6 +272,20 @@ box-shadow: 18px 12px 33px -18px rgba(48, 48, 48, 0.5);
 }
 .show-created{
 	margin-left: 100px;
+}
+.content-like-btn{
+	background-color: #053a94;
+	height: 40px;
+	border-radius:20px;
+	padding: 10px;
+	color: #FFF6E6;
+}
+.content-like-btn:hover{
+	background-color: #074dc5;
+}
+.suggest{
+	padding-top: 20px;
+	font-weight: bold;
 }
 .show-wrapper-right{
 }

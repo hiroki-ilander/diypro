@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-	# before_action :authenticate_user!, only: [:new, :create, :edit, :update]
+	before_action :authenticate_user!, only: [:new, :create, :edit, :update]
 	before_action :set_post, only: [:show, :edit]
 	
 	def index
@@ -16,6 +16,7 @@ class PostsController < ApplicationController
 		@user = User.all
 		@comment = Comment.new
 		@comments = @post.comments.includes(:user)
+		@like = Like.new
 	end
 	def edit
 	end
