@@ -189,6 +189,8 @@ box-shadow: 18px 12px 33px -18px rgba(48, 48, 48, 0.5);
 	padding: 10px 40px 10px 10px;
 	font-size: 18px;
 	height: 220px;
+	letter-spacing: 1px;
+	line-height: 1.3em;
 }
 .likes{
 	display: flex;
@@ -322,6 +324,8 @@ box-shadow: 18px 12px 33px -18px rgba(48, 48, 48, 0.5);
 }
 .show-content{
 	padding-top: 10px;
+	letter-spacing: 1px;
+	line-height: 1.3em;
 }
 .comment-input{
 	width: 600px;
@@ -337,9 +341,9 @@ box-shadow: 18px 12px 33px -18px rgba(48, 48, 48, 0.5);
 	padding: 10px;
 }
 .comment-btn{
-	width: 500px;
+	width: 100px;
 	height: 40px;
-	margin: 10px 50px;
+	margin: 10px 250px;
 	border-radius: 5px;
 	background-color: #053a94;
 	color: #FFF6E6;
@@ -351,7 +355,7 @@ box-shadow: 18px 12px 33px -18px rgba(48, 48, 48, 0.5);
 .comment{
 	border-bottom: 1px solid #de8f07;
 	padding: 10px;
-	line-height: 27px;
+	line-height: 22px;
 }
 /*sign-up sign-in page*/
 .background{
@@ -374,11 +378,15 @@ box-shadow: 18px 12px 33px -18px rgba(48, 48, 48, 0.5);
 	border-bottom: 2px solid brown
 }
 .form-control{
-	margin: 0 auto;
-	width: 400px;
+	padding: 15px;
+	margin: 10px auto 0;
+	width: 500px;
 	display: block;
-	font-size: 20px;
-	height: 60px;
+	height: 100px;
+	border-radius: 10px;
+}
+.form-control.small{
+	height: 20px;
 }
 
 #btn{
