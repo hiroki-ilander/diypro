@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-	before_action :authenticate_user!, only: [:new, :create, :edit, :update]
+	before_action :authenticate_user!, only: [:new, :create, :edit, :update, :search]
 	before_action :set_post, only: [:show, :edit]
 	
 	def index
@@ -28,6 +28,9 @@ class PostsController < ApplicationController
 	def destroy
 		Post.destroy(params[:id])
 		redirect_to "/"
+	end
+	def search
+		@posts = Post.search(params[:keyword])
 	end
 	private 
 	def posts_params
